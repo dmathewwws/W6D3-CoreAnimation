@@ -20,18 +20,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        let moveAnimation = CABasicAnimation()
-        moveAnimation.keyPath = "position.x"
-        moveAnimation.toValue = view.frame.midX
+        let moveAnimation = CABasicAnimation(keyPath: "position.x")
         moveAnimation.fromValue = -view.frame.midX
-        moveAnimation.delegate = self
+        moveAnimation.toValue = view.frame.midX
+        moveAnimation.duration = 2
         
-        usernameField.layer.addAnimation(moveAnimation, forKey: "username")
+        
+        usernameField.layer.addAnimation(moveAnimation, forKey: "username's moveAnimation")
+        
         
         moveAnimation.beginTime = CACurrentMediaTime() + 0.5
         moveAnimation.fillMode = kCAFillModeBoth
         
-        passwordField.layer.addAnimation(moveAnimation, forKey: "password")
+        passwordField.layer.addAnimation(moveAnimation, forKey: "password's moveAnimtion")
         
         
     }
@@ -40,16 +41,17 @@ class ViewController: UIViewController {
         
         print("loginButtonPressed")
         
-        let shake = CAKeyframeAnimation()
-        shake.keyPath = "position.x"
-        shake.duration = 0.5
         
-        shake.keyTimes = [0, 0.25, 0.5, 0.75, 1]
-        shake.values = [0, -10, 10, -10, 0]
-        shake.additive = true
-        shake.repeatCount = 1
+        let shakey = CAKeyframeAnimation(keyPath: "position.x")
+        shakey.duration = 0.5
+        shakey.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+        shakey.values = [0, 10, 10, 10, 10]
+        shakey.additive = true
         
-        passwordField.layer.addAnimation(shake, forKey: "shake")
+        
+        passwordField.layer.addAnimation(shakey, forKey: "shakey")
+        
+        
         
     }
     
