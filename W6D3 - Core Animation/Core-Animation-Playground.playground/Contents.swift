@@ -1,5 +1,3 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 import XCPlayground
 
@@ -14,10 +12,12 @@ XCPlaygroundPage.currentPage.liveView = containerView
 //: ![Alternate text](1-green-circle.png width="width" height="height" poster="poster")
 
 //let greenView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//
 //greenView.backgroundColor = UIColor.greenColor()
 //greenView.center = containerView.center
 //greenView.layer.cornerRadius = greenView.frame.width/2
 //containerView.addSubview(greenView)
+
 
 
 //2. Basic Animation. Make a green cicle to a square.
@@ -43,6 +43,8 @@ XCPlaygroundPage.currentPage.liveView = containerView
 
 //: ![Alternate text](3-square-along-path.gif width="width" height="height" poster="poster")
 
+
+
 //let greenView = UIView(frame: CGRect(x: 16, y: 239, width: 50, height: 50))
 //greenView.backgroundColor = UIColor.greenColor()
 //greenView.center = containerView.center
@@ -63,8 +65,7 @@ XCPlaygroundPage.currentPage.liveView = containerView
 
 // 4. Group Animation
 
-//: ![Alternate text](1-green-circle.png width="width" height="height" poster="poster")
-
+//: ![Alternate text](4-CAGroupAnimation.gif width="width" height="height" poster="poster")
 
 //let circle = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0))
 //circle.center = containerView.center
@@ -95,7 +96,10 @@ XCPlaygroundPage.currentPage.liveView = containerView
 //
 //circle.layer.addAnimation(group, forKey: "moveCircle2")
 //
-//circle.layer.zPosition = 1
+//circle.transform = CGAffineTransformMakeScale(5, 5)
+
+
+
 
 
 
